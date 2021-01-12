@@ -23,6 +23,12 @@ new = []
 for d in data:
 	if len(d) < 100:
 		new.append(d)
-print('一共有', len(new), '筆留言長度小於100')         
+print('一共有', len(new), '筆留言長度小於100')
 
+# list comprehension 清單快寫法
 
+good = [d for d in data if 'good' in d]         
+print(good)
+
+bad = ['bad' in d for d in data]
+# 留言有提到bad才會是True
